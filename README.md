@@ -6,41 +6,41 @@ A collection of resources to study Solana smart contract security, auditing, and
 
 ## Foundations 📚
 
-- [Armani Sealevel Attacks and How to avoid them in Anchor](https://github.com/project-serum/sealevel-attacks)
+- [x] [Armani Sealevel Attacks and How to avoid them in Anchor](https://github.com/project-serum/sealevel-attacks)
   - [Summary Thread](https://twitter.com/pencilflip/status/1483880018858201090) by pencilflip - use Anchor attributes, constraints and types, it will make your life easier!
-- [Armani Tips on Developing Secure Solana Programs](https://twitter.com/armaniferrante/status/1411589629384355840)
+- [x] [Armani Tips on Developing Secure Solana Programs](https://twitter.com/armaniferrante/status/1411589629384355840)
   - Be wary of  `UncheckedAccount` and `AccountInfo` - check them properly!
-- [CMichel How to become a smart contract auditor](https://cmichel.io/how-to-become-a-smart-contract-auditor/) 
+- [x] [CMichel How to become a smart contract auditor](https://cmichel.io/how-to-become-a-smart-contract-auditor/) 
   - Targeted at ETH folks but contains general advice
-- [DeFi MOOC samczsun Practical Smart Contract Security](https://www.youtube.com/watch?v=pJKy5HWuFK8)
+- [x] [DeFi MOOC samczsun Practical Smart Contract Security](https://www.youtube.com/watch?v=pJKy5HWuFK8)
   - Great intro to smart contract security that provides an overview of a large surface area of attacks. Mostly ETH-based but also covers a cross-chain BTC/ETH exploit, and contains lots of concepts that carry over to Solana
-- [Kudelski Solana Program Security](https://research.kudelskisecurity.com/2021/09/15/solana-program-security-part1/)
+- [x] [Kudelski Solana Program Security](https://research.kudelskisecurity.com/2021/09/15/solana-program-security-part1/)
   - A high-level overview of ownership and data validation
-- [Neodyme Common Pitfalls](https://blog.neodyme.io/posts/solana_common_pitfalls)
+- [ ] [Neodyme Common Pitfalls](https://blog.neodyme.io/posts/solana_common_pitfalls)
   - Check owner, check signer, check account data, be careful of integer over/underflow, verify invoke_signed(), and [use Anchor](https://twitter.com/armaniferrante/status/1438706351295827968?s=20&t=YS6ldLG-nvqLffT4eZtpKg) (unless you have a good reason not to), e.g. account confusions are prevented in Anchor by implicitly assigning each `#[account]` a type with an 8-byte identifier 
-- [Neodyme Solana Security Workshop Exercises and Solutions](https://workshop.neodyme.io/)
+- [ ] [Neodyme Solana Security Workshop Exercises and Solutions](https://workshop.neodyme.io/)
   - Corresponding exercises to the common pitfalls mentioned in the blog post 
-- [Neodyme Thinking Like An Attacker Workshop Recording](https://www.youtube.com/watch?v=vbkhhgeP30I)
+- [ ] [Neodyme Thinking Like An Attacker Workshop Recording](https://www.youtube.com/watch?v=vbkhhgeP30I)
   - A quick rundown of the PoC framework and an explanation of Level 0 of the challenge
-- [OtterSec Solana from an Auditor’s perspective](https://osec.io/blog/tutorials/2022-03-14-solana-security-intro/)
+- [ ] [OtterSec Solana from an Auditor’s perspective](https://osec.io/blog/tutorials/2022-03-14-solana-security-intro/)
   - A bottoms-up introduction to Solana's Execution and Programming Model from a security perspective
-- [Sec3 Arithmetic Overflow and Underflow](https://www.sec3.dev/blog/understanding-arithmetic-overflow-underflows-in-rust-and-solana-smart-contracts)
+- [ ] [Sec3 Arithmetic Overflow and Underflow](https://www.sec3.dev/blog/understanding-arithmetic-overflow-underflows-in-rust-and-solana-smart-contracts)
   - Don't use `+, - , /, *` operations, check arithmetic operations for overflow and underflow!
-- [Sec3 How to Audit Part 1: A Systematic Approach](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-1-a-systematic-approach)
+- [ ] [Sec3 How to Audit Part 1: A Systematic Approach](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-1-a-systematic-approach)
   - A high-level overview of common attack surfaces and questions to ask as an auditor
-- [Sec3 How to Audit Part 2: using automated tools to find vulnerabilities](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-2-automated-scanning)
+- [ ] [Sec3 How to Audit Part 2: using automated tools to find vulnerabilities](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-2-automated-scanning)
   - An outline of tools that can automatically scan your code for vulnerabilities, unsafe Rust, and spelling. More security tools are needed! 
-- [Sec3 How to Audit Part 3: Penetration Testing](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-3-penetration-testing)
+- [ ] [Sec3 How to Audit Part 3: Penetration Testing](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-3-penetration-testing)
   - How to execute a proof of concept for an attack with Neodyme's PoC framework
-- [Sec3 How to Audit Part 4: Anchor](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-4-the-anchor-framework)
+- [ ] [Sec3 How to Audit Part 4: Anchor](https://www.sec3.dev/blog/how-to-audit-solana-smart-contracts-part-4-the-anchor-framework)
   - How Anchor's `#[program] `, `#[derive(Accounts)]` and `#[account]`work under-the-hood
-- [Sec3 Owner and Signer Check](https://www.sec3.dev/blog/from-ethereum-smart-contracts-to-solana-programs-two-common-security-pitfalls-and-beyond)
+- [ ] [Sec3 Owner and Signer Check](https://www.sec3.dev/blog/from-ethereum-smart-contracts-to-solana-programs-two-common-security-pitfalls-and-beyond)
   - Check the owner and check the signer! Use `#[account]` and `Signer<'info>` to [prevent](https://twitter.com/armaniferrante/status/1438706352805797889?s=20&t=YS6ldLG-nvqLffT4eZtpKg) this
-- [Solend Auditing Workshop](https://docs.google.com/presentation/d/1jZ9kVo6hnhBsz3D2sywqpMojqLE5VTZtaXna7OHL1Uk/edit?pli=1#slide=id.ge15c343642_0_51) 
+- [ ] [Solend Auditing Workshop](https://docs.google.com/presentation/d/1jZ9kVo6hnhBsz3D2sywqpMojqLE5VTZtaXna7OHL1Uk/edit?pli=1#slide=id.ge15c343642_0_51) 
   - Known attacks from ETH and how they carry over to Solana + auditing methodology
-- [Trail of Bits DeFi Security Success Stories](https://www.youtube.com/watch?v=jGrtK5k0CK0)
+- [ ] [Trail of Bits DeFi Security Success Stories](https://www.youtube.com/watch?v=jGrtK5k0CK0)
   - ETH-focused but broadly applicable advice on securing systems in DeFi
-- [Zellic The Vulnerabilities You’ll Write With Anchor](https://www.zellic.io/blog/the-vulnerabilities-youll-write-with-anchor/)
+- [ ] [Zellic The Vulnerabilities You’ll Write With Anchor](https://www.zellic.io/blog/the-vulnerabilities-youll-write-with-anchor/)
   - A subset of common vulnerabilities you'll come across in Anchor programs
 
 
